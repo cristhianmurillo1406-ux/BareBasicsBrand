@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =========================
      DISCOUNT CONFIG
   ========================= */
-  const discountCodes = ["BARESHOP10, BARE10TOLEDO"];
+  const discountCodes = ["BARESHOP10", "BARE10TOLEDO"];
   let discountApplied = false;
 
   /* =========================
