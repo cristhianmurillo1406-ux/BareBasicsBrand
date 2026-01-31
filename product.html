@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Product — Bare Basics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/gallery-item.css">
+    <link rel="stylesheet" href="css/account.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="product-page">
+
+<!-- SHOP HEADER -->
+<header class="product-header">
+
+  <!-- BOTÓN MENÚ (izquierda) -->
+  <button class="menu-btn" id="openMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- LOGO (centro) -->
+  <a href="index.html" class="shop-logo">
+    <img src="assets/logonegro.png" alt="Bare Basics">
+  </a>
+
+  <!-- ACCIONES (derecha) -->
+  <div class="header-actions">
+
+  <!--  <button class="icon-btn" id="openAccount">
+      <img src="assets/account.png" alt="Account">
+    </button> -->
+
+<button class="icon-btn" id="openCart">
+  <img src="assets/carrito.png" alt="Cart">
+</button>
+  </div>
+
+</header>
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeMenu">✕</button>
+
+<nav class="side-nav">
+
+    <div class="menu-block">
+<a href="shop.html" class="menu-link">
+    <h2 class="menu-title">TIENDA</h2>
+</a>
+
+<ul class="menu-sub">
+  <li>
+    <a href="shop.html?filter=new" class="shop-filter shop-filter-new">NUEVO</a>
+  </li>
+  <li>
+    <a href="shop.html?filter=sale" class="shop-filter">SALE</a>
+  </li>
+</ul>
+
+    </div>
+
+<div class="menu-block">
+  <a href="gallery.html" class="menu-link">
+    <h2 class="menu-title">GALERÍA</h2>
+  </a>
+</div>
+
+</nav>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- MAIN -->
+<main>
+  <div class="product-content">
+
+    <!-- IMAGES -->
+<div class="product-images"></div>
+
+    <!-- INFO -->
+    <div class="product-info">
+        <h1></h1>
+        <p class="price"></p>
+        <p class="color-label"></p>
+
+<p class="size-label">Talla</p>
+
+<div class="size-selector" id="sizeSelector"></div>
+
+<button class="cta disabled" id="addToCartBtn" disabled>
+  SELECCIONA LA TALLA
+</button>
+
+
+<p class="cart-warning" id="cartWarning">
+  Solo puedes añadir hasta 6 unidades de la misma talla.
+</p>
+      
+      <!-- TABS -->
+<div class="accordion">
+
+  <div class="accordion-item">
+    <button class="accordion-header" data-target="info">
+      <span>DETALLES</span>
+      <span class="arrow">↓</span>
+    </button>
+
+    <div class="tab-panel" id="info">
+      <p id="productDescription"></p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header" data-target="shipping">
+      <span>ENVÍOS</span>
+      <span class="arrow">↓</span>
+    </button>
+
+<div class="tab-panel" id="shipping">
+  <h4>ENVÍOS</h4>
+  <p>
+    Envío gratuito para entregas dentro del área metropolitana de Quito.
+    Para ubicaciones fuera de la ciudad, se aplica una tarifa de envío de $3.
+  </p>
+  <p>
+    Los pedidos se procesan después de la confirmación del pago y se entregan
+    dentro de un plazo de 2 días hábiles.
+  </p>
+  <p>
+    Realizamos envíos a nivel nacional dentro de Ecuador con un costo adicional,
+    dependiendo de la ciudad de destino.
+  </p>
+
+  <h4>CAMBIOS Y DEVOLUCIONES</h4>
+  <p>
+    Esperamos sinceramente que estés satisfecho con tu compra en Bare Basics.
+    Sin embargo, si cambias de opinión por cualquier motivo, con gusto realizaremos
+    un cambio o emitiremos un reembolso (no incluye el costo de envío en caso de que
+    se haya aplicado envío gratuito).
+  </p>
+  <p>
+    Por favor, devuelve el/los artículo(s) sin uso y en su empaque original
+    dentro de los 14 días posteriores a la recepción de tu pedido.
+  </p>
+
+  <h4>INFORMACIÓN ADICIONAL</h4>
+  <p>
+    Para cualquier información adicional, por favor contacta a nuestro servicio
+    de atención al cliente.
+  </p>
+</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<div class="see-more-container">
+  <button class="see-more-btn" id="seeMoreBtn">
+    VER MÁS
+  </button>
+</div>
+
+<!-- RECOMMENDED PRODUCTS -->
+<section class="recommended-end">
+
+  <p class="recommended-label">PRODUCTOS RECOMENDADOS</p>
+
+  <div class="recommended-container">
+    <div class="recommended-row"></div>
+  </div>
+  </section>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="Bare Basics logo">
+    </div>
+
+    <!-- HELP -->
+    <div class="footer-column">
+      <h4>AYUDA</h4>
+      <ul>
+<li>
+  <a href="contact.html" class="footer-contact">Contacto</a>
+</li>
+<li>
+  <a href="about.html">Acerca</a>
+</li>
+<li>
+  <a href="terms.html">Términos & Condiciones</a>
+</li>
+      </ul>
+    </div>
+
+    <!-- INFO -->
+    <div class="footer-column">
+      <h4>INFO</h4>
+      <ul>
+<li>
+  <a href="carrers.html">Carreras</a>
+</li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+       <a href="https://www.instagram.com/barebasicsbrand?igsh=MXhxNHFkMXU1YnV0ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@barebasicsbrand?_r=1&_t=ZS-93WGfzKZHjY" target="_blank" rel="noopener noreferrer">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2026, Bare Basics
+    </p>
+  </div>
+</footer>
+
+<!-- MINI CART -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="mini-cart" id="miniCart">
+  <button class="cart-close" id="closeCart">✕</button>
+
+  <h3 class="cart-title">MI CARRITO</h3>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+    
+<div class="cart-subtotal">
+  <span>SUBTOTAL</span>
+
+  <div class="subtotal-values">
+    <span id="cartSubtotal">$0</span>
+    <span id="cartSubtotalDiscounted" class="hidden"></span>
+  </div>
+</div>
+  
+<div class="discount-section">
+  <p class="discount-title">Código de descuento</p>
+
+  <div class="discount-input">
+    <input 
+      type="text" 
+      id="discountCode" 
+      placeholder="Ingresa tu código"
+    >
+    <button id="applyDiscount">Aplicar</button>
+  </div>
+
+  <p class="discount-message" id="discountMessage"></p>
+</div>
+
+    <button id="checkoutBtn" class="checkout-btn">PAGAR</button>
+  </div>
+
+<div id="emptyCartMessage" class="cart-empty-message">
+  Tu carrito está vacío
+</div>
+
+  <div id="cartLimitMessage" class="cart-limit-message">
+    Solo puedes añadir hasta 6 unidades de la misma talla.
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL --
+<div class="account-overlay" id="accountOverlay"></div>
+
+<div class="account-modal" id="accountModal">
+  <button class="account-close" id="closeAccount">✕</button>
+
+  <h3 class="account-title">CUENTA</h3>
+
+   LOGIN 
+  <form class="account-form" id="loginForm" novalidate>
+    <input type="email" placeholder="Correo electrónico" required>
+      <small id="loginError" class="form-error"></small>
+    <input type="password" placeholder="Contraseña" required>
+
+    <button type="submit" class="account-btn">
+      INICIAR SESIÓN
+    </button>
+
+    <p class="account-switch">
+      ¿No tienes cuenta?
+      <span id="showRegister">Crear cuenta</span>
+    </p>
+  </form>
+
+   REGISTER 
+  <form class="account-form hidden" id="registerForm" novalidate>
+    <input type="email" placeholder="Correo electrónico" required>
+        <small id="registerError" class="form-error"></small>
+    <input type="password" placeholder="Contraseña" required>
+    <input type="password" placeholder="Confirmar contraseña" required>
+
+    <button type="submit" class="account-btn">
+      CREAR CUENTA
+    </button>
+
+    <p class="account-switch">
+      ¿Ya tienes cuenta?
+      <span id="showLogin">Iniciar sesión</span>
+    </p>
+  </form>
+</div> -->
+
+
+<script src="js/menu.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
+<script src="js/account.js"></script>
+
+
+</body>
+</html>
+

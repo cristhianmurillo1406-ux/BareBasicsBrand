@@ -1,0 +1,882 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* HEADER */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 32px;
+  background: #fff;
+}
+
+.logo {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-logo {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.hero-logo img {
+    width: 180px; /* ajustable */
+    opacity: 0.9;
+}
+
+/* ARCHIVE INTRO */
+.archive-intro {
+    background-color: #fff;
+    color: #000;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.archive-content {
+    max-width: 800px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #000;
+}
+
+.archive-content p {
+    margin-bottom: 24px;
+}
+
+/* CARRUSEL */
+.carousel {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.carousel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+/* Imagen visible */
+.carousel img.active {
+    opacity: 1;
+}
+
+/* Ajuste para imagen 1 y 3 */
+.carousel img.focus-low {
+    object-position: 50% 30%;
+}
+
+/* CONTENIDO */
+.hero-content {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.hero-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+/* FORM */
+.access-form {
+    display: flex;
+    gap: 8px;
+}
+
+.access-form input {
+    width: 240px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    font-size: 14px;
+}
+
+.access-form button {
+    padding: 10px 16px;
+    background: white;
+    color: black;
+    border: none;
+    font-size: 12px
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+  background: #0e0e0e;
+  color: #cfcfcf;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Contenido principal */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: end;
+  gap: 80px;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 90px;
+  opacity: 0.9;
+}
+
+/* Columnas */
+.footer-column h4 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.footer-column li:hover {
+  opacity: 1;
+}
+
+/* Redes sociales */
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social img {
+  width: 18px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 40px;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.shop-link {
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.shop-link:hover {
+    opacity: 1;
+}
+
+.shop-btn {
+    margin-top: 24px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* SHOP */
+.shop-body {
+    background: #fff;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.shop-header {
+    padding: 24px 32px;
+}
+
+.shop-logo {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Contenedor */
+.shop-container {
+    padding: 40px 60px 80px;
+}
+
+.product-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* 🔑 tamaño uniforme */
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* Nombre */
+.product-name {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Tag */
+.product-tag {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    z-index: 2;
+}
+
+.product-tag.gray {
+    background: #d3d3d3;
+}
+
+/* Sold out */
+.sold-out {
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Header SHOP */
+.shop-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.shop-logo img {
+    height: 24px; /* ajustable */
+    opacity: 0.95;
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-btn {
+    position: absolute;
+    left: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    width: 22px;
+    height: 2px;
+    background: #000;
+}
+
+/* MENÚ LATERAL */
+.side-menu {
+    position: fixed;
+    inset: 0;
+    background: #e10600; /* rojo Brutcol-style */
+    z-index: 100;
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+/* Activo */
+.side-menu.active {
+    transform: translateX(0);
+}
+
+/* Botón cerrar */
+.close-btn {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Categorías arriba */
+.side-categories {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 48px;
+}
+
+.side-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centra vertical */
+    align-items: center;       /* centra horizontal */
+    text-align: center;
+}
+
+/* Links */
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav li {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+/* SALE */
+.side-nav .sale {
+    color: #ffe600;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background: #000;
+    z-index: 1000;
+
+    transition: left 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* cuando está abierto */
+.side-menu.active {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.side-menu:not(.active) .close-btn {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 900;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* HEADER PRODUCT PAGE */
+.product-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    background: #fff;
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Logo centrado */
+.product-logo img {
+    height: 22px;
+    opacity: 0.95;
+}
+
+/* Botón hamburguesa izquierda */
+.product-header .menu-btn {
+    position: absolute;
+    left: 32px;
+}
+
+/* ACCOUNT derecha */
+.account-link {
+    position: absolute;
+    right: 32px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.account-link:hover {
+    opacity: 1;
+}
+
+.size-selector {
+  margin-top: 20px;
+}
+
+.size-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 10px 16px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.size-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.size-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+.product-page {
+  padding-top: 72px; /* altura real del header */
+}
+
+.shop-body .shop-container {
+  padding-top: 110px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  align-items: start; /* 🔑 esto permite alturas distintas */
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 🔑 llena el contenedor */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.02);
+}
+
+.product-card {
+  box-shadow: none;
+  background: none;
+}
+
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+.product-card:focus,
+.product-card:active {
+  outline: none;
+}
+
+.menu-block {
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 52px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.menu-sub {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-sub li {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    opacity: 0.7;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.menu-sub li:hover {
+    opacity: 1;
+}
+
+.menu-sub .sale {
+    color: #fff; /* ya no amarillo */
+    opacity: 0.5;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.menu-link:hover .menu-title {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.shop-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-actions img {
+  width: 18px;
+  height: auto;
+}
+
+.header-actions {
+    position: absolute;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.shop-filter {
+  text-decoration: none;
+  color: red;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.shop-filter:hover {
+  opacity: 0.7;
+}
+
+.shop-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px; /* 👈 ajusta aquí */
+  height: 32px;
+
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: red;
+
+  transition: all 0.2s ease;
+}
+
+.shop-filter {
+  min-width: 72px;
+  height: 36px;
+}
+
+.shop-filter.active {
+  background: red;
+  color: white;
+}
+
+.shop-filter-new {
+  color: white;
+  font-weight: 600;
+}
+
+.menu-sub li {
+  opacity: 1;           /* 👈 elimina el fade */
+}
+
+.menu-sub li a {
+  opacity: 1;
+}
+
+.shop-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+  height: 36px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: red;
+}
+
+.shop-filter-new {
+  color: #fff;
+  font-weight: 700;
+}
+
+.about {
+  max-width: 600px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact {
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  flex: 1;
+}
+
+.about {
+  min-height: calc(100vh - 200px); /* ajusta según header + footer */
+  max-width: 680px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+}
+
+.about {
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.carousel {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden; /* evita que algo sobresalga */
+}
+
+.carousel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* transición más fluida y rápida */
+    will-change: opacity; /* optimización de render */
+}
+
+.carousel img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel img.focus-low {
+    object-position: 50% 30%;
+}

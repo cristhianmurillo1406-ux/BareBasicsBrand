@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact — Bare Basics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/gallery-item.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="shop-body">
+
+<header class="product-header">
+
+  <!-- BOTÓN MENÚ (izquierda) -->
+  <button class="menu-btn" id="openMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- LOGO (centro) -->
+  <a href="index.html" class="shop-logo">
+    <img src="assets/logonegro.png" alt="Bare Basics">
+  </a>
+
+  <!-- ACCIONES (derecha) -->
+  <div class="header-actions">
+
+<button class="icon-btn" id="openCart">
+  <img src="assets/carrito.png" alt="Cart">
+</button>
+  </div>
+
+</header>
+
+<div class="side-menu" id="sideMenu">
+    <button class="close-btn" id="closeMenu">✕</button>
+
+<nav class="side-nav">
+
+    <div class="menu-block">
+<a href="shop.html" class="menu-link">
+    <h2 class="menu-title">TIENDA</h2>
+</a>
+
+<ul class="menu-sub">
+  <li>
+    <a href="shop.html?filter=new" class="shop-filter shop-filter-new">NUEVO</a>
+  </li>
+  <li>
+    <a href="shop.html?filter=sale" class="shop-filter">SALE</a>
+  </li>
+</ul>
+
+    </div>
+
+<div class="menu-block">
+  <a href="gallery.html" class="menu-link">
+    <h2 class="menu-title">GALERÍA</h2>
+  </a>
+</div>
+
+</nav>
+</div>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main class="about">
+  <h1>ACERCA</h1>
+
+  <p>
+    La idea de Bare Basics nace de la idea de que la simplicidad no significa falta de carácter.
+    Creemos en el diseño limpio, materiales honestos y prendas que hablan en silencio,
+    pero perduran.
+  </p>
+
+  <p>
+    Cada prenda está diseñada con intención, poniendo el foco en la calidad, el fit
+    y los detalles que se sienten atemporales, no pasajeros.
+  </p>
+</main>
+
+<body>
+
+<footer class="footer">
+  <div class="footer-content">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/logo.png" alt="Bare Basics logo">
+    </div>
+
+    <!-- HELP -->
+    <div class="footer-column">
+      <h4>AYUDA</h4>
+      <ul>
+<li>
+  <a href="contact.html" class="footer-contact">Contacto</a>
+</li>
+<li>
+  <a href="about.html">Acerca</a>
+</li>
+<li>
+  <a href="terms.html">Términos & Condiciones</a>
+</li>
+      </ul>
+    </div>
+
+    <!-- INFO -->
+    <div class="footer-column">
+      <h4>INFO</h4>
+      <ul>
+<li>
+  <a href="carrers.html">Carreras</a>
+</li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+       <a href="https://www.instagram.com/barebasicsbrand?igsh=MXhxNHFkMXU1YnV0ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/@barebasicsbrand?_r=1&_t=ZS-93WGfzKZHjY" target="_blank" rel="noopener noreferrer">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2026, Bare Basics
+    </p>
+  </div>
+</footer>
+
+<!-- MINI CART -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="mini-cart" id="miniCart">
+  <button class="cart-close" id="closeCart">✕</button>
+
+  <h3 class="cart-title">MI CARRITO</h3>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+    
+<div class="cart-subtotal">
+  <span>SUBTOTAL</span>
+
+  <div class="subtotal-values">
+    <span id="cartSubtotal">$0</span>
+    <span id="cartSubtotalDiscounted" class="hidden"></span>
+  </div>
+</div>
+  
+<div class="discount-section">
+  <p class="discount-title">Código de descuento</p>
+
+  <div class="discount-input">
+    <input 
+      type="text" 
+      id="discountCode" 
+      placeholder="Ingresa tu código"
+    >
+    <button id="applyDiscount">Aplicar</button>
+  </div>
+
+  <p class="discount-message" id="discountMessage"></p>
+</div>
+
+    <button id="checkoutBtn" class="checkout-btn">PAGAR</button>
+  </div>
+  <div id="cartLimitMessage" class="cart-limit-message">
+    Solo puedes añadir hasta 6 unidades de la misma talla.
+  </div>
+</div>
+
+<script src="js/menu.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
+<script src="js/account.js"></script>
+
+</html>
