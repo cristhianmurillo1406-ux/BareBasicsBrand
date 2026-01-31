@@ -99,7 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cartSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
 
-    resetDiscount();
+    if (cart.length === 0) {
+  resetDiscount();
+}
 
     /* ===== PAGAR ===== */
     if (checkoutBtn) {
