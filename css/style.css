@@ -86,6 +86,10 @@ body {
     z-index: 1;
 }
 
+.carousel img.second-slide {
+    object-position: 50% 50% !important;
+}
+
 .carousel img {
     position: absolute;
     inset: 0;
