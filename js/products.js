@@ -401,7 +401,7 @@ Disponibles en talla 9–11, ideales para un ajuste seguro y cómodo.
       "img/products/Speed_Socks_Blanco/SSB_1.png"
       ],
       scroll: [
-      "img/products/Speed_Socks_Blanco/SSB_2.jpg",
+      "img/products/Speed_Socks_Blanco/SSB_1.jpg",
       "img/products/Speed_Socks_Blanco/SSB_2.jpeg"
       ]
     },
