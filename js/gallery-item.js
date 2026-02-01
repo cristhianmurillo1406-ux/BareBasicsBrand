@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "WINTER SEASON ’25",
       date: "ENERO 30, 2025",
       images: [
-        "img/gallery/Winter_Season/1.JPG",
+        "img/gallery/Winter_Season/1.PNG",
         "img/gallery/Winter_Season/2.PNG",
         "img/gallery/Winter_Season/3.PNG",
         "img/gallery/Winter_Season/4.JPG",
