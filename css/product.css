@@ -1055,3 +1055,163 @@ body {
   }
 
 }
+
+@media (max-width: 1000px) {
+
+  /* ======================
+     NO TOCAMOS POSICIÓN
+  ====================== */
+  .mini-cart {
+    padding: 24px;
+    font-size: 18px;      /* 👈 SOLO TEXTO */
+    line-height: 1.5;
+  }
+
+  /* ===== TÍTULO ===== */
+  .cart-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* ===== ITEMS ===== */
+  .cart-items {
+    gap: 18px;
+  }
+
+  .cart-item {
+    font-size: 16px;
+  }
+
+  .cart-item-name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .cart-item-price {
+    font-size: 16px;
+  }
+
+  .cart-item-size {
+    font-size: 14px;
+  }
+
+  /* ===== SUBTOTAL ===== */
+  .cart-subtotal span {
+    font-size: 15px;
+  }
+
+  #cartSubtotal,
+  #cartSubtotalDiscounted {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* ===== DESCUENTO ===== */
+  .discount-title {
+    font-size: 15px;
+  }
+
+  .discount-input input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .discount-input button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .discount-message {
+    font-size: 14px;
+  }
+
+  /* ===== BOTÓN PAGAR ===== */
+  .checkout-btn {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  /* ===== MENSAJES ===== */
+  .cart-empty-message,
+  .cart-limit-message {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* ===== BOTÓN CERRAR ===== */
+  .cart-close {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .cart-title {
+    font-size: 24px;
+  }
+
+  .cart-item-name {
+    font-size: 18px;
+  }
+
+  .cart-item-price {
+    font-size: 18px;
+  }
+
+  #cartSubtotal,
+  #cartSubtotalDiscounted {
+    font-size: 20px;
+  }
+
+  .checkout-btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .quantity-controls button,
+  .qty-btn {
+    width: 36px;          /* 👈 más grande */
+    height: 36px;
+    font-size: 18px;      /* 👈 símbolo + y - más visible */
+  }
+
+  .quantity-controls span,
+  .qty-value {
+    font-size: 16px;
+    min-width: 28px;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  /* CONTENEDOR cantidad */
+  .cart-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* BOTONES + y - */
+  .cart-qty button {
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+    line-height: 1;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* NÚMERO */
+  .cart-qty span {
+    font-size: 16px;
+    min-width: 24px;
+    text-align: center;
+  }
+}
