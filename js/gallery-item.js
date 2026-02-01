@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "WINTER SEASON ’25",
       date: "ENERO 30, 2025",
       images: [
-        "img/gallery/Winter_Season/1.jpg",
+        "img/gallery/Winter_Season/1.JPG",
         "img/gallery/Winter_Season/2.PNG",
         "img/gallery/Winter_Season/3.PNG",
         "img/gallery/Winter_Season/4.JPG",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "STREET ART",
       date: "ABRIL 11, 2025",
       images: [
-        "img/gallery/Street_Art/1.JPG",
+        "img/gallery/Street_Art/1.jpg",
         "img/gallery/Street_Art/2.JPG",
         "img/gallery/Street_Art/3.JPG",
         "img/gallery/Street_Art/4.JPG",
