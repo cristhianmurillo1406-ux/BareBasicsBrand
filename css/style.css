@@ -280,10 +280,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* Header */
-.shop-header {
-    padding: 24px 32px;
-}
 
 .shop-logo {
     font-size: 14px;
@@ -342,14 +338,6 @@ body {
   .product-card {
     aspect-ratio: 1 / 1;
   }
-}
-
-/* Header SHOP */
-.shop-header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Logo */
@@ -509,12 +497,6 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Logo centrado */
-.product-logo img {
-    height: 22px;
-    opacity: 0.95;
-}
-
 /* Botón hamburguesa izquierda */
 .product-header .menu-btn {
     position: absolute;
@@ -666,12 +648,6 @@ body {
     opacity: 0.85;
 }
 
-.header-actions {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
 .icon-btn {
   background: none;
   border: none;
@@ -689,12 +665,6 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 18px;
 }
 
 .header-actions button {
@@ -861,3 +831,93 @@ body {
   padding-top: 40px;
 }
 
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .product-header {
+    height: 120px;
+  }
+
+  /* LOGO CENTRO */
+  .shop-logo img {
+    height: 44px;
+  }
+
+  /* HAMBURGUESA */
+  .menu-btn span {
+    width: 28px;
+    height: 3px;
+  }
+
+  /* ICONOS DERECHA */
+  .header-actions img {
+    width: 24px;
+  }
+
+  /* CONTENIDO BAJA */
+  .shop-body .shop-container {
+    padding-top: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .footer {
+    margin-top: auto;
+  }
+
+  .shop-container {
+    flex: 1;
+  }
+
+  .about {
+    flex: 1;
+  }
+
+  .product-page {
+    flex: 1;
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .menu-sub a {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* ===== BOTÓN TIENDA ===== */
+  .shop-btn {
+    position: absolute;
+    bottom: 20%;              /* ← lo sube visualmente */
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 16px;          /* ← más legible en móvil */
+    padding: 14px 32px;       /* ← botón más grande */
+    letter-spacing: 1px;
+
+    min-width: 200px;
+    text-align: center;
+  }
+}

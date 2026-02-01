@@ -367,8 +367,8 @@ kilómetro, sin distracciones.
       "img/products/Speed_Socks_Rosa/SSR_1.png"
       ],
       scroll: [
-      "img/products/Speed_Socks_Rosa/SSR_2.jpg",
-      "img/products/Speed_Socks_Rosa/SSR_3.jpg"
+      "img/products/Speed_Socks_Rosa/SSR_2.JPG",
+      "img/products/Speed_Socks_Rosa/SSR_3.JPG"
       ]
     },
     sizes: ["9-11"],
